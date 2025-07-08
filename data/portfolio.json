@@ -1,0 +1,26 @@
+[
+  {
+    "id": 7,
+    "title": "Dynamic Art",
+    "category": "artwork",
+    "thumbnail": "assets/img/project-7.jpg",
+    "fullImage": "assets/img/project-7.jpg",
+    "description": "New artwork loaded from JSON."
+  },
+  {
+    "id": 8,
+    "title": "Dynamic Art",
+    "category": "design",
+    "thumbnail": "assets/img/project-8.jpeg",
+    "fullImage": "assets/img/project-8.jpeg",
+    "description": "New artwork loaded from JSON."
+  },
+    {
+    "id": 8,
+    "title": "상세페이지",
+    "category": "design",
+    "thumbnail": "assets/img/project-9.jpg",
+    "fullImage": "assets/img/project-9.jpg",
+    "description": "통이미지 보이게"
+  }
+]
