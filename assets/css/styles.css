@@ -997,6 +997,27 @@ img {
   .home-container {
     column-gap: 1.75rem;
   }
+
+  /* See Details(텍스트 링크)에만 위쪽 여백 추가 */
+  .work-link {
+    margin-top: 1.2em;   /* 위 여백 */
+    margin-bottom: 0.2em; /* 혹시 아래가 너무 붙으면 이 값도 조정 */
+  }
+   .work__filters {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem 1.7rem;
+    min-width: 0;
+    max-width: 100vw;
+    white-space: nowrap;
+  }
+  .work__filters > * {
+    min-width: 85px;
+  }
+  .work-list {
+    gap:0.75rem 1.5rem;
+  }
+
 }
 
 /* For small devices */
@@ -1082,23 +1103,4 @@ body[style*="overflow: hidden"] {
   max-height: none;
   height: auto;
   min-height: 60vh;
-}
-
-@media (max-width: 600px) {
-  /* See Details(텍스트 링크)에만 위쪽 여백 추가 */
-  .work-link {
-    margin-top: 1.2em !important;   /* 위 여백 */
-    margin-bottom: 0.2em !important; /* 혹시 아래가 너무 붙으면 이 값도 조정 */
-  }
-   .work__filters {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.2rem 1.7rem;
-    min-width: 0;
-    max-width: 100vw;
-    white-space: nowrap;
-  }
-  .work__filters > * {
-    min-width: 85px;
-  }
 }
