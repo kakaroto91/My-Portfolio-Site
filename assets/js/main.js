@@ -102,23 +102,66 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
 /*==================== MIXITUP FILTER PORTFOLIO ====================*/
 var mixer = mixitup(".work-container", {
-  selectors: {
-    target: ".mix",
-  },
-  animation: {
-    duration: 300,
-  },
+  selectors: { target: ".mix" },
+  animation: { duration: 300 },
 });
 
 /* Active work */
 const linkWork = document.querySelectorAll(".work-item");
-function activeWork() {
+function activeWork(e) {
   linkWork.forEach((l) => l.classList.remove("active-work"));
   e.currentTarget.classList.add("active-work");
 }
 linkWork.forEach((l) => l.addEventListener("click", activeWork));
+
+// ⭐️ 포트폴리오 모달
+let lastScrollY = 0;
+
+// work-link(Visual Project) 클릭 시
+document.querySelectorAll('.work-link').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const imgSrc = this.getAttribute('data-full');
+    if (!imgSrc) return;
+    document.getElementById('modal-image').src = imgSrc;
+    document.getElementById('portfolio-modal').classList.remove('hidden');
+    lastScrollY = window.scrollY;
+    document.body.classList.add('modal-open');
+    document.body.style.top = `-${lastScrollY}px`;
+  });
+});
+// work-img(이미지) 클릭 시
+document.querySelectorAll('.work-img').forEach(img => {
+  img.addEventListener('click', function() {
+    const imgSrc = img.getAttribute('data-full') || img.src;
+    document.getElementById('modal-image').src = imgSrc;
+    document.getElementById('portfolio-modal').classList.remove('hidden');
+    lastScrollY = window.scrollY;
+    document.body.classList.add('modal-open');
+    document.body.style.top = `-${lastScrollY}px`;
+  });
+});
+
+function closeModal() {
+  document.getElementById('portfolio-modal').classList.add('hidden');
+  document.body.classList.remove('modal-open');
+  document.body.style.top = '';
+  window.scrollTo(0, lastScrollY || 0);
+}
+// 닫기 버튼
+document.getElementById('modal-close').onclick = closeModal;
+// ESC
+document.addEventListener('keydown', function(e){
+  if (e.key === 'Escape') closeModal();
+});
+// 바깥(배경) 클릭 닫기
+document.getElementById('portfolio-modal').addEventListener('click', function(e){
+  if (e.target === this) closeModal();
+});
+
 
 /*==================== EMAIL JS ====================*/
 const contactForm = document.getElementById("contact-form"),
