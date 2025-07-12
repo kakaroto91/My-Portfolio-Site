@@ -404,19 +404,23 @@
             <li class="work-item" data-filter=".artwork">Artwork</li>
           </ul>
 
-          <div class="work-container grid">
+            <div class="work-container grid">
             <div class="mix artwork">
               <article class="work-card">
-                <img src="assets/img/project-1.jpeg" alt="" class="work-img" />
+                <img src="assets/img/project-1.jpg" alt="" class="work-img" />
 
-                <h4 class="work-category">Branding</h4>
+                <h4 class="work-category">artwork</h4>
                 <h3 class="work-title">Zorro</h3>
 
                 <p class="work-description">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </p>
 
-                <a href="#" class="work-link">
+                <a
+                  href="#"
+                  class="work-link"
+                  data-full="assets/img/project-1.jpg"
+                >
                   Visual Project <i class="ri-arrow-right-line work-icon"></i
                 ></a>
               </article>
@@ -433,7 +437,11 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </p>
 
-                <a href="#" class="work-link">
+                <a
+                  href="#"
+                  class="work-link"
+                  data-full="assets/img/project-2.jpg"
+                >
                   Visual Project <i class="ri-arrow-right-line work-icon"></i
                 ></a>
               </article>
@@ -441,7 +449,7 @@
 
             <div class="mix design">
               <article class="work-card">
-                <img src="assets/img/project-3.jpeg" alt="" class="work-img" />
+                <img src="assets/img/project-3.jpg" alt="" class="work-img" />
 
                 <h4 class="work-category">Design</h4>
                 <h3 class="work-title">Mozar</h3>
@@ -450,7 +458,11 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </p>
 
-                <a href="#" class="work-link">
+                <a
+                  href="#"
+                  class="work-link"
+                  data-full="assets/img/project-3.jpg"
+                >
                   Visual Project <i class="ri-arrow-right-line work-icon"></i
                 ></a>
               </article>
@@ -459,7 +471,7 @@
 
             <div class="mix design">
               <article class="work-card">
-                <img src="assets/img/project-4.jpeg" alt="" class="work-img" />
+                <img src="assets/img/project-4.jpg" alt="" class="work-img" />
 
                 <h4 class="work-category">Design</h4>
                 <h3 class="work-title">Gooir</h3>
@@ -468,7 +480,11 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </p>
 
-                <a href="#" class="work-link">
+                <a
+                  href="#"
+                  class="work-link"
+                  data-full="assets/img/project-4.jpg"
+                >
                   Visual Project <i class="ri-arrow-right-line work-icon"></i
                 ></a>
               </article>
@@ -478,6 +494,66 @@
               <article class="work-card">
                 <img src="assets/img/project-5.jpg" alt="" class="work-img" />
 
+                <h4 class="work-category">Artwork</h4>
+                <h3 class="work-title">Stacy</h3>
+
+                <p class="work-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+
+                <a
+                  href="#"
+                  class="work-link"
+                  data-full="assets/img/project-5.jpg"
+                >
+                  Visual Project <i class="ri-arrow-right-line work-icon"></i
+                ></a>
+              </article>
+            </div>
+            <div class="mix artwork">
+              <article class="work-card">
+                <img src="assets/img/project-7.jpg" alt="" class="work-img" />
+
+                <h4 class="work-category">Artwork</h4>
+                <h3 class="work-title">Stacy</h3>
+
+                <p class="work-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+
+                <a
+                  href="#"
+                  class="work-link"
+                  data-full="assets/img/project-7.jpg"
+                >
+                  Visual Project <i class="ri-arrow-right-line work-icon"></i
+                ></a>
+              </article>
+            </div>
+            <div class="mix design">
+              <article class="work-card">
+                <img src="assets/img/project-8.jpeg" alt="" class="work-img" />
+
+                <h4 class="work-category">Design</h4>
+                <h3 class="work-title">Stacy</h3>
+
+                <p class="work-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+
+                <a
+                  href="#"
+                  class="work-link"
+                  data-full="assets/img/project-8.jpeg"
+                >
+                  Visual Project <i class="ri-arrow-right-line work-icon"></i
+                ></a>
+              </article>
+            </div>
+            <div class="mix development">
+              <article class="work-card">
+                <img src="assets/img/project-9.jpg" alt="" class="work-img" />
+
                 <h4 class="work-category">Development</h4>
                 <h3 class="work-title">Stacy</h3>
 
@@ -485,7 +561,11 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </p>
 
-                <a href="#" class="work-link">
+                <a
+                  href="#"
+                  class="work-link"
+                  data-full="assets/img/project-9.jpg"
+                >
                   Visual Project <i class="ri-arrow-right-line work-icon"></i
                 ></a>
               </article>
@@ -613,6 +693,44 @@
         </p>
       </div>
     </footer>
+
+
+<div id="portfolio-modal" class="hidden">
+      <div class="modal-content">
+        <button id="modal-close" aria-label="Close modal">
+          <!-- 더 작은 X 아이콘 -->
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 22 22"
+            stroke="currentColor"
+            fill="none"
+          >
+            <line
+              x1="17"
+              y1="5"
+              x2="5"
+              y2="17"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="5"
+              y1="5"
+              x2="17"
+              y2="17"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+        <div class="modal-image-wrapper">
+          <img id="modal-image" src="" alt="Full View" />
+        </div>
+      </div>
+    </div>
+
+
 
     <!--=============== GSAP ===============-->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
