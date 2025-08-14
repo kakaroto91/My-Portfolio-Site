@@ -1,4 +1,4 @@
-let allProjects = [];
+let allProjects = []; // <-- 한 번만 선언
 let visibleCount = 3;
 let currentFilter = "all";
 let scrollY = 0;
