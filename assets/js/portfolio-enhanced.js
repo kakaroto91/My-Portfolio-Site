@@ -168,8 +168,24 @@ function showModal(imgSrc) {
         justify-content: center;
         padding: 0;
       ">&times;</button>
-      <div class="modal-image-wrapper">
-        <img id="modal-image" src="${imgSrc}" alt="Full View">
+      <div class="modal-image-wrapper" style="
+        max-height: 85vh;
+        max-width: 90vw;
+        overflow-y: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 0 1rem 0;
+      ">
+        <img id="modal-image" src="${imgSrc}" alt="Full View" style="
+          max-width: 600px;
+          width: 100%;
+          height: auto;
+          max-height: 80vh;
+          object-fit: contain;
+          display: block;
+          margin: auto;
+        ">
       </div>
     </div>
   `;
